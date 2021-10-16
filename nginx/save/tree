@@ -17,13 +17,14 @@
 |-- proxy_params
 |-- scgi_params
 |-- sites-available
-|   `-- default
+|   |-- default
+|   `-- infrastructure
 |-- sites-enabled
-|   `-- default -> /etc/nginx/sites-available/default
+|   `-- infrastructure -> /etc/nginx/sites-available/infrastructure
 |-- snippets
 |   |-- fastcgi-php.conf
 |   `-- snakeoil.conf
 |-- uwsgi_params
 `-- win-utf
 
-6 directories, 20 files
+6 directories, 21 files

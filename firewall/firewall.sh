@@ -42,8 +42,9 @@ iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 # kommentar wegnehmen: SSH INPUT OUTPUT zulassen
 # (bitte kein ftp, sondern sftp (ueber ssh))
 #
-#iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-#iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
+
 #
 # kommentare wegnehmen: HTTPS INPUT OUTPUT zulassen
 #
@@ -77,7 +78,7 @@ iptables -A OUTPUT -p icmp -j ACCEPT
 #
 # SSH INPUT OUTPUT zulassen
 #
-iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+#iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 #iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
 #
 # kommentare wegnehmen: HTTPS INPUT OUTPUT zulassen
@@ -94,6 +95,12 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 #
 #iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 #iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
+#
+# BK 2021-10-16: git ports. this was not necessary,
+# for pushing to github, opening ssh port 22 output was enough.
+#
+#iptables -A INPUT -p tcp --dport 9418 -j ACCEPT
+#iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT
 #
 # DNS zulassen
 #

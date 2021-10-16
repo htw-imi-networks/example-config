@@ -1,2 +1,5 @@
 [init]
 	defaultBranch = main
+[user]
+	email = kleinen@infrastructure.de
+	name = Barne Kleinen

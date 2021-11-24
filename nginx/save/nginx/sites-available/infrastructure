@@ -2,7 +2,7 @@ server {
         listen 80;
         listen [::]:80;
 
-        root /home/kleinen/public_html;
+        root /home/kleinen/nginx-stuff/public_html;
         index index.html ;
 
         server_name infrastructure.f4.htw-berlin.de;

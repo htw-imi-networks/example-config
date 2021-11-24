@@ -48,8 +48,8 @@ iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
 #
 # kommentare wegnehmen: HTTPS INPUT OUTPUT zulassen
 #
-#iptables -A INPUT -p tcp --dport 443 -j ACCEPT
-#iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 #
 # kommentare wegnehmen: HTTP alternativ INPUT OUTPUT zulassen
 #
@@ -84,12 +84,12 @@ iptables -A OUTPUT -p icmp -j ACCEPT
 # kommentare wegnehmen: HTTPS INPUT OUTPUT zulassen
 #
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
-#iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 #
 # kommentare wegnehmen: HTTP INPUT OUTPUT zulassen
 #
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-#iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
 #
 # kommentare wegnehmen: HTTP alternativ INPUT OUTPUT zulassen
 #

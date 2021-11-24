@@ -18,13 +18,15 @@
 |-- scgi_params
 |-- sites-available
 |   |-- default
-|   `-- infrastructure
+|   |-- infrastructure
+|   `-- infrastructure_ssl
 |-- sites-enabled
-|   `-- infrastructure -> /etc/nginx/sites-available/infrastructure
+|   |-- infrastructure -> /etc/nginx/sites-available/infrastructure
+|   `-- infrastructure_ssl -> ../sites-available/infrastructure_ssl
 |-- snippets
 |   |-- fastcgi-php.conf
 |   `-- snakeoil.conf
 |-- uwsgi_params
 `-- win-utf
 
-6 directories, 21 files
+6 directories, 23 files

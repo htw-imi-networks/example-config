@@ -1,0 +1,16 @@
+server {
+        listen 443 ssl;
+        listen [::]:443;
+
+	ssl_certificate /home/kleinen/nginx-stuff/ssl/nginx-selfsigned.crt;
+	ssl_certificate_key /home/kleinen/nginx-stuff/ssl/nginx-selfsigned.key;
+
+        root /home/kleinen/nginx-stuff/public_html;
+        index index.html ;
+
+        server_name infrastructure.f4.htw-berlin.de;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
